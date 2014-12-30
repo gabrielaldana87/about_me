@@ -26,19 +26,18 @@ body.appendChild(div2);
 div2.appendChild(test);
 div.appendChild(test2);
 div.appendChild(div3);
-div3.appendChild(test3);
 div3.appendChild(div4);
 div4.appendChild(test4);
 div.appendChild(div5);
-div5.appendChild(test5);
+
 div5.appendChild(div6);
 div6.appendChild(test6);
 div2.appendChild(div7);
-div7.appendChild(test7);
+
 div7.appendChild(div8);
 div8.appendChild(test8);
 div2.appendChild(div9);
-div9.appendChild(test9);
+
 div9.appendChild(div10);
 div10.appendChild(test10);
 
@@ -54,13 +53,10 @@ div9.id="bottomrightquad";
 div10.id="contact_me";
 
 
-test.innerText="rightpanel";
-test2.innerText="leftpanel";
-test3.innerText="topleftquad"
 test4.innerText="projectsdiv";
-test5.innerText="bottomsleftquad";
+
 test6.innerText="resume";
-test7.innerText="toprightquad";
+
 test8.innerText="about_me";
-test9.innerText="bottomrightquad";
+
 test10.innerText="contact_me";

@@ -1,5 +1,5 @@
 body{
-  /*background-color: black;*/
+  background-color: black;
 }
 
 .backdiv{
@@ -37,7 +37,7 @@ body{
   right:0px;
 }
 #toprightquad{
-  height:37%;
+  height:50%;
   position:relative;
 }
 
@@ -49,11 +49,13 @@ body{
 }
 
 #bottomrightquad{
-  height:40%;
+  height:50%;
+  position:relative;
 }
 
 #contact_me{
   background-color:red;
   width:80%;
   height:50%;
+  position:absolute;
 }
