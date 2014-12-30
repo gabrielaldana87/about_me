@@ -1,0 +1,59 @@
+body{
+  /*background-color: black;*/
+}
+
+.backdiv{
+  /*background-color:red;*/
+  width:50%;
+  float:left;
+  height:100%;
+}
+
+#topleftquad{
+  height:50%;
+  /*background-color:blue;*/
+  position:relative;
+}
+
+#projectsdiv{
+  height:50%;
+  background-color:yellow;
+  position: absolute;
+  bottom: 0;
+  width:80%%;
+  right:0px
+}
+
+#bottomsleftquad{
+  position:relative;
+  height:50%;
+}
+
+#resume{
+  height:100%;
+  background-color:green;
+  position: absolute;
+  bottom: 0;
+  right:0px;
+}
+#toprightquad{
+  height:37%;
+  position:relative;
+}
+
+#about_me{
+  background-color:salmon;
+  width:70%;
+  bottom:0px;
+  position:absolute;
+}
+
+#bottomrightquad{
+  height:40%;
+}
+
+#contact_me{
+  background-color:red;
+  width:80%;
+  height:50%;
+}
