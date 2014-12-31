@@ -16,7 +16,7 @@ var test8 = document.createElement("h1");
 var div9 = document.createElement("div");
 var div10 = document.createElement("div");
 var test10 = document.createElement("h1");
-var gabriel = document.createElement("img");
+// var gabriel = document.createElement("img");
 
 body.appendChild(div);
 body.appendChild(div2);
@@ -33,7 +33,7 @@ div2.appendChild(div7);
 
 div7.appendChild(div8);
 div8.appendChild(test8);
-div8.appendChild(gabriel);
+// div8.appendChild(gabriel);
 div2.appendChild(div9);
 
 div9.appendChild(div10);
@@ -46,7 +46,9 @@ div4.id="projectsdiv";
 div5.id="bottomsleftquad";
 div6.id="resume";
 div7.id="toprightquad";
-div8.id="about_me";
+//div8.setAttribute("id","about_me");
+div8.setAttribute("class","about_me bottom-to-top");
+
 div9.id="bottomrightquad";
 div10.id="contact_me";
 //gabriel.src="./gabriel.png"

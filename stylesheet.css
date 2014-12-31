@@ -1,5 +1,5 @@
 body{
-  background-color: black;
+  background-color: #ecf0f1;
 }
 
 .backdiv{
@@ -17,11 +17,11 @@ body{
 
 #projectsdiv{
   height:50%;
-  background-color:yellow;
+  background-color: #8e44ad;
   position: absolute;
-  bottom: 0;
+  bottom: 10;
   width:80%%;
-  right:0px;
+  right:10px;
   -webkit-animation: trans 6s;
   animation: trans 6s;
 }
@@ -33,10 +33,10 @@ body{
 
 #resume{
   height:100%;
-  background-color:green;
+  background-color:#2980b9;
   position: absolute;
   bottom: 0;
-  right:0px;
+  right:10px;
   -webkit-animation: trans 4s;
   animation: trans 4s;
 }
@@ -44,25 +44,33 @@ body{
   height:40%;
   position:relative;
 }
-
-#about_me{
-  background-color:salmon;
-  bottom:0px;
+.about_me{
+  background-color:crimson;
+  bottom:10px;
   position:absolute;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
   width:33%;
-  height:25%
+  height:100%
   -webkit-animation: trans 2s;
   animation: trans 2s;
+  background-size: 100% auto;
 }
 
+.bottom-to-top{
+  top:50%;
+}
 
-#about_me:hover{
-  background-color:salmon;
-  width:33%;
-  bottom:0px;
+.about_me:hover.bottom-to-top{
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  background-size: 100% auto;
+  background-image:url("./gabriel.png");
+  bottom:10px;
+  top:25%;
   position:absolute;
-  -webkit-animation: trans 2s;
-  animation: trans 2s;
+  /*-webkit-animation: trans .5s;
+  animation: trans .5s;*/
 }
 
 #bottomrightquad{
@@ -71,7 +79,7 @@ body{
 }
 
 #contact_me{
-  background-color:red;
+  background-color:#27ae60;
   width:80%;
   height:50%;
   position:absolute;
@@ -85,6 +93,7 @@ h1{
   font-weight:strong;
   margin-top:-10px;
   margin-left:-5px;
+  color:#ecf0f1;
 }
 
 #contact_corner{
