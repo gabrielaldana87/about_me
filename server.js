@@ -111,5 +111,14 @@ var server = http.createServer( function ( request, response )
           })
         }
 
+        if(path==="/gabriel.png")
+          {
+            fs.readFile("./gabriel.png", function(err,data)
+            {
+              var convert = data.toString();
+              response.end(data);
+            })
+          }
+
   })
   server.listen( 3000 );

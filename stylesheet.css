@@ -21,7 +21,9 @@ body{
   position: absolute;
   bottom: 0;
   width:80%%;
-  right:0px
+  right:0px;
+  -webkit-animation: trans 6s;
+  animation: trans 6s;
 }
 
 #bottomsleftquad{
@@ -35,17 +37,32 @@ body{
   position: absolute;
   bottom: 0;
   right:0px;
+  -webkit-animation: trans 4s;
+  animation: trans 4s;
 }
 #toprightquad{
-  height:50%;
+  height:40%;
   position:relative;
 }
 
 #about_me{
   background-color:salmon;
-  width:70%;
   bottom:0px;
   position:absolute;
+  width:33%;
+  height:25%
+  -webkit-animation: trans 2s;
+  animation: trans 2s;
+}
+
+
+#about_me:hover{
+  background-color:salmon;
+  width:33%;
+  bottom:0px;
+  position:absolute;
+  -webkit-animation: trans 2s;
+  animation: trans 2s;
 }
 
 #bottomrightquad{
@@ -58,4 +75,36 @@ body{
   width:80%;
   height:50%;
   position:absolute;
+  -webkit-animation: trans 8s;
+  animation: trans 8s;
+}
+
+h1{
+  font-family: Raleway;
+  font-size:60px;
+  font-weight:strong;
+  margin-top:-10px;
+  margin-left:-5px;
+}
+
+#contact_corner{
+  margin-top:25%;
+}
+
+/*Animation*/
+@-webkit-keyframes trans {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes trans {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
