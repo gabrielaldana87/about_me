@@ -31,8 +31,8 @@ body{
   height:50%;
 }
 
-#resume{
-  height:100%;
+.resume{
+  height:50%;
   background-color:#2980b9;
   position: absolute;
   bottom: 0;
@@ -40,6 +40,24 @@ body{
   -webkit-animation: trans 4s;
   animation: trans 4s;
 }
+
+.top-to-bottom{
+  top:0%;
+}
+
+.resume:hover.top-to-bottom{
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  /*background-size: 100% auto;*/
+  /*background-image:url("./gabriel.png");*/
+  bottom:10px;
+  top:0%;
+  height:100%;
+  position:absolute;
+  /*-webkit-animation: trans .5s;
+  animation: trans .5s;*/
+}
+
 #toprightquad{
   height:40%;
   position:relative;
@@ -78,14 +96,32 @@ body{
   position:relative;
 }
 
-#contact_me{
+.contact_me{
   background-color:#27ae60;
   width:80%;
   height:50%;
   position:absolute;
   -webkit-animation: trans 8s;
   animation: trans 8s;
+  filter: alpha(opacity=80);
 }
+
+.left-to-right{
+  top:0%;
+}
+
+.contact_me:hover.left-to-right{
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  background-size: 100% auto;
+  /*background-image:url("./gabriel.png");*/
+  top:0%;
+  height:100%;
+  position:absolute;
+  /*-webkit-animation: trans .5s;
+  animation: trans .5s;*/
+}
+
 
 h1{
   font-family: Raleway;
