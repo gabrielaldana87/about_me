@@ -140,6 +140,95 @@ h1{
 nav{
   background-color:red;
 }
+
+
+.navdiv{
+  background-color:white;
+  width:50%;
+  float:left;
+  height:10%;
+}
+
+div#testme.navdiv{
+  position:relative;
+}
+
+a{
+  font-family:Raleway;
+  text-decoration:none;
+  font-size:100%;
+}
+
+#first{
+  background-color:#ff8bb6;
+  right:0px;
+  width:25%;
+  color:#ff8bb6;
+
+}
+#second{
+  background-color:#6fd7a5;
+  width:25%;
+  right:0px;
+  color:#6fd7a5;
+}
+#third{
+  background-color:#955b9b;
+  width:25%;
+  right:0px;
+  color:#955b9b;
+}
+#fourth{
+  background-color:#fdfd6f;
+  width:25%;
+  right:0px;
+  color:#fdfd6f;
+}
+
+div#second.right-to-left{
+  position:absolute;
+  top:25%;
+}
+div#first.right-to-left{
+  position:absolute;
+  top:0%;
+}
+div#third.right-to-left{
+  position:absolute;
+  top:50%;
+}
+div#fourth.right-to-left{
+  position:absolute;
+  top:75%;
+}
+
+#first:hover.right-to-left{
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  background-size: 100% auto;
+  /*background-image:url("./gabriel.png");*/
+  right:0%;
+  width:50%;
+  position:absolute;
+  /*-webkit-animation: trans .5s;
+  animation: trans .5s;*/
+}
+
+a:hover #first:hover.right-to-left {
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  background-size: 100% auto;
+  /*background-image:url("./gabriel.png");*/
+  right:0%;
+  width:50%;
+  color:#ecf0f1;
+  font-size:100%;
+  /*-webkit-animation: trans .5s;
+  animation: trans .5s;*/
+}
+
+
+
 /*Animation*/
 @-webkit-keyframes trans {
   from {
@@ -156,11 +245,4 @@ nav{
   to {
     opacity: 1;
   }
-}
-
-.navdiv{
-  background-color:red;
-  width:50%;
-  float:left;
-  height:10%;
 }

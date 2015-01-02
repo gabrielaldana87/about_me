@@ -11,7 +11,8 @@ var elements = function(name,img,parent)
   this.class="."+name,
   this.parent="#"+parent,
   this.body=name+"_body",
-  this.idSelect="#"+this.body
+  this.idSelect="#"+this.body,
+  this.navdivsid=name+"navdivsid"
 }
 
 var about_me = new elements("about_me","gabriel,png","toprightquad");
@@ -108,16 +109,28 @@ if(testbody.id===array[i]["body"])
     divvy.appendChild(h1_nav);
     h1_nav.innerText=array[i]["name"];
 
-
-    console.log(am_body);
     var div = document.createElement("div");
     nav.appendChild(div);
-    div.setAttribute("class","navdiv")
+    div.setAttribute("class","navdiv");
+    div.id="testme";
+    var neworder = ["first","second","third","fourth"]
+
     for(j=0;j<array.length;j++)
       {
+      if(array[j]!==array[i])
+        {
     var nav_divs = document.createElement("div");
     div.appendChild(nav_divs);
+    nav_divs.id=neworder[j-1];
+    nav_divs.setAttribute("class","right-to-left");
+    var atags = document.createElement("a");
+    div.appendChild(atags);
+    var testme = atags.appendChild(nav_divs);
+    atags.href=array[j]["url"];
     nav_divs.innerText=array[j]["name"];
       }
+    }
+
 }
   }
+//console.log(document.querySelector("#about_me_body"));
