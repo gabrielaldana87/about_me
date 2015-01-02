@@ -1,3 +1,7 @@
+var testbody = document.querySelector("body");
+
+
+
 var elements = function(name,img,parent)
 {
   this.name= name,
@@ -5,7 +9,9 @@ var elements = function(name,img,parent)
   this.url=name+".html",
   this.img="'"+img+"'",
   this.class="."+name,
-  this.parent="#"+parent
+  this.parent="#"+parent,
+  this.body=name+"_body",
+  this.idSelect="#"+this.body
 }
 
 var about_me = new elements("about_me","gabriel,png","toprightquad");
@@ -14,7 +20,9 @@ var resume = new elements("resume", "filler", "bottomsleftquad");
 var contact_me = new elements("contact_me", "filler", "bottomrightquad");
 var array = [about_me,projects_div,resume,contact_me];
 
-var body = document.querySelector("body");
+if(testbody.id==="body")
+{
+var body = document.querySelector("#body");
 
 var div = document.createElement("div");
 var div2 = document.createElement("div");
@@ -82,4 +90,34 @@ for(i=0;i<array.length;i++)
     var select = document.querySelector(array[i]["class"]);
     boo.appendChild(select);
     boo.href=array[i]["link"];
+  }
+}
+
+for(i=0;i<array.length;i++)
+  {
+if(testbody.id===array[i]["body"])
+{
+    var am_body = document.querySelector(array[i]["idSelect"]);
+
+    var nav = document.createElement("nav");
+    am_body.appendChild(nav);
+    var divvy = document.createElement("div");
+    nav.appendChild(divvy);
+    divvy.setAttribute("class","navdiv");
+    var h1_nav = document.createElement("h1");
+    divvy.appendChild(h1_nav);
+    h1_nav.innerText=array[i]["name"];
+
+
+    console.log(am_body);
+    var div = document.createElement("div");
+    nav.appendChild(div);
+    div.setAttribute("class","navdiv")
+    for(j=0;j<array.length;j++)
+      {
+    var nav_divs = document.createElement("div");
+    div.appendChild(nav_divs);
+    nav_divs.innerText=array[j]["name"];
+      }
+}
   }

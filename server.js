@@ -120,5 +120,14 @@ var server = http.createServer( function ( request, response )
             })
           }
 
+          if(path==="/about_me")
+            {
+              fs.readFile("./about_me.html", function(err,data)
+              {
+                var convert = data.toString();
+                response.end(data);
+              })
+            }
+
   })
   server.listen( 3000 );
