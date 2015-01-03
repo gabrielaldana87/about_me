@@ -12,14 +12,16 @@ var elements = function(name,img,parent)
   this.parent="#"+parent,
   this.body=name+"_body",
   this.idSelect="#"+this.body,
-  this.navdivsid=name+"navdivsid"
+  this.navdivsid=name+"navdivsid",
+  this.h1tag=name+"_h1"
 }
 
 var about_me = new elements("about_me","gabriel,png","toprightquad");
 var projects_div = new elements("projectsdiv","filler","topleftquad");
 var resume = new elements("resume", "filler", "bottomsleftquad");
 var contact_me = new elements("contact_me", "filler", "bottomrightquad");
-var array = [about_me,projects_div,resume,contact_me];
+var homepage = new elements("homepage","filler","filler");
+var array = [about_me,projects_div,resume,contact_me,homepage];
 
 if(testbody.id==="body")
 {
@@ -107,6 +109,7 @@ if(testbody.id===array[i]["body"])
     divvy.setAttribute("class","navdiv");
     var h1_nav = document.createElement("h1");
     divvy.appendChild(h1_nav);
+    h1_nav.id=array[i]["h1tag"];
     h1_nav.innerText=array[i]["name"];
 
     var div = document.createElement("div");
@@ -126,7 +129,7 @@ if(testbody.id===array[i]["body"])
     var atags = document.createElement("a");
     div.appendChild(atags);
     var testme = atags.appendChild(nav_divs);
-    atags.href=array[j]["url"];
+    atags.href=array[j]["link"];
     nav_divs.innerText=array[j]["name"];
       }
     }

@@ -84,7 +84,7 @@ var server = http.createServer( function ( request, response )
   console.log( request.url );
   // fs.readFile( "index.js", function ( err, data1 ) {
 
-  if(path==="/")
+  if(path==="/" || path==="/homepage")
     {
       fs.readFile("./homepage.html", function(err,data)
       {
@@ -128,6 +128,23 @@ var server = http.createServer( function ( request, response )
                 response.end(data);
               })
             }
+
+            if(path==="/resume")
+              {
+                fs.readFile("./resume.html", function(err,data)
+                {
+                  var convert = data.toString();
+                  response.end(data);
+                })
+              }
+              if(path==="/projectsdiv")
+                {
+                  fs.readFile("./projectsdiv.html", function(err,data)
+                  {
+                    var convert = data.toString();
+                    response.end(data);
+                  })
+                }
 
   })
   server.listen( 3000 );
