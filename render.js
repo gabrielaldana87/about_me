@@ -1,7 +1,5 @@
 var testbody = document.querySelector("body");
 
-
-
 var elements = function(name,img,parent)
 {
   this.name= name,
@@ -134,7 +132,7 @@ if(testbody.id===array[i]["body"])
     divbelowintro.setAttribute("class","divbelow");
     var paragraph = document.createElement("p");
     textdiv.appendChild(paragraph);
-    paragraph.innerText=array[i]["text"];
+    paragraph.innerText="this is a text. i repeat, this is a test.";
 
 
     h1_gabriel.innerText="gabriel aldana";

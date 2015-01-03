@@ -2,15 +2,11 @@
 
 var http = require( "http" );
 var fs = require( "fs" );
-
 var server = http.createServer( function ( request, response )
 {
-  path = request.url;
+  var path = request.url;
   var handle = path.split("/");
   console.log( request.url );
-
-  var http = require( "http" );
-  var fs = require( "fs" );
   var elements = function(name,img,parent)
   {
     this.name= name,
@@ -23,7 +19,9 @@ var server = http.createServer( function ( request, response )
     this.body=name+"_body",
     this.idSelect="#"+this.body,
     this.navdivsid=name+"navdivsid",
-    this.h1tag=name+"_h1"
+    this.h1tag=name+"_h1",
+    this.render="render.js";
+
   }
 
   var about_me = new elements("about_me","gabriel.png","toprightquad");
@@ -33,10 +31,9 @@ var server = http.createServer( function ( request, response )
   var homepage = new elements("homepage","filler","filler");
   var array = [about_me,projects_div,resume,contact_me,homepage];
 
-
-  if(path==="/" || path===array[4]["link"])
+if(path==="/")
     {
-      fs.readFile(array[4]["url"], function(err,data)
+      fs.readFile("homepage.html", function(err,data)
       {
         var convert = data.toString();
         response.end(convert);
@@ -65,10 +62,30 @@ var server = http.createServer( function ( request, response )
         {
         if(handle[1]===array[i]["name"])
           {
-            fs.readFile(array[i]["url"], function(err,data)
+            var textreader = array[i]["text"];
+            var renderingfile = array[i]["render"];
+
+            fs.readFile(array[i]["url"], function(err,datafirst)
             {
-              var convert = data.toString();
-              response.end(convert);
+              var convert = datafirst.toString();
+              fs.readFile(renderingfile,function(err,datasecond)
+              {
+                var converender = datasecond.toString();
+                fs.readFile(textreader,function(err,datathird)
+                {
+                  var converttext = datathird.toString().trim();
+                  var testhis = converender.replace("REPLACEME",converttext);
+                  fs.writeFile(renderingfile,testhis,function(e)
+                  {
+                    console.log("converted to data!");
+                    console.log(convert);
+                  })
+                  response.end(convert);
+                })
+
+              })
+
+              //response.end(convert);
 
             })
           }
