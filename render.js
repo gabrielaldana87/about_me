@@ -7,7 +7,7 @@ var elements = function(name,img,parent)
   this.name= name,
   this.link="/"+name,
   this.url=name+".html",
-  this.img="'"+img+"'",
+  this.img=img,
   this.class="."+name,
   this.parent="#"+parent,
   this.body=name+"_body",
@@ -16,9 +16,9 @@ var elements = function(name,img,parent)
   this.h1tag=name+"_h1"
 }
 
-var about_me = new elements("about_me","gabriel,png","toprightquad");
+var about_me = new elements("about_me","gabriel.png","toprightquad");
 var projects_div = new elements("projectsdiv","filler","topleftquad");
-var resume = new elements("resume", "filler", "bottomsleftquad");
+var resume = new elements("resume", "resume.png", "bottomsleftquad");
 var contact_me = new elements("contact_me", "filler", "bottomrightquad");
 var homepage = new elements("homepage","filler","filler");
 var array = [about_me,projects_div,resume,contact_me,homepage];
@@ -101,7 +101,7 @@ for(i=0;i<array.length;i++)
 if(testbody.id===array[i]["body"])
 {
     var am_body = document.querySelector(array[i]["idSelect"]);
-
+    am_body.setAttribute("class","pages_back");
     var nav = document.createElement("nav");
     am_body.appendChild(nav);
     var divvy = document.createElement("div");
@@ -109,8 +109,27 @@ if(testbody.id===array[i]["body"])
     divvy.setAttribute("class","navdiv");
     var h1_nav = document.createElement("h1");
     divvy.appendChild(h1_nav);
-    h1_nav.id=array[i]["h1tag"];
+    h1_nav.setAttribute("class",array[i]["h1tag"])
     h1_nav.innerText=array[i]["name"];
+    var pardiv = document.createElement("div");
+    am_body.appendChild(pardiv);
+    pardiv.id="pardiv";
+    var colordiv = document.createElement("div");
+    pardiv.appendChild(colordiv);
+    colordiv.id="colordiv";
+    var container = document.createElement("div");
+    pardiv.appendChild(container);
+    container.id="container";
+    var image = document.createElement("img");
+    container.appendChild(image);
+    image.src=array[i]["img"];
+    var par = document.createElement("p");
+    container.appendChild(par);
+    var h1_gabriel = document.createElement("h1");
+    par.appendChild(h1_gabriel);
+    h1_gabriel.innerText="gabriel aldana";
+    h1_gabriel.setAttribute("class",array[i]["h1tag"])
+
 
     var div = document.createElement("div");
     nav.appendChild(div);

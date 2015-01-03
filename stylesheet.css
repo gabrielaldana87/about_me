@@ -2,6 +2,10 @@ body{
   background-color: #ecf0f1;
 }
 
+.pages_back{
+  background-color: lightgrey;
+}
+
 .backdiv{
   /*background-color:red;*/
   width:50%;
@@ -137,19 +141,20 @@ h1{
 }
 
 nav{
-  height:100%;
+  height:10%;
 }
 
 .navdiv{
   background-color:white;
   width:50%;
   float:left;
-  height:10%;
+  height:100%;
 }
 
 div#testme.navdiv{
   position:relative;
   width:50%;
+  height:100%;
 }
 
 a{
@@ -305,17 +310,44 @@ a:hover #fourth:hover.right-to-left {
 }
 
 
-#about_me_h1{
+.about_me_h1{
   color:crimson;
 }
 
-#resume_h1{
+.resume_h1{
   color:#2980b9;
 }
 
-#projectsdiv_h1{
+.projectsdiv_h1{
   color:#8e44ad;
 }
+
+#pardiv{
+  position:relative;
+}
+
+#colordiv{
+  background-color:crimson;
+  width:25%;
+  height:2%;
+  /*position:absolute;*/
+  top:20%;
+}
+
+#container{
+  top:50%;
+  background-color:white;
+}
+
+img{
+  width:25%;
+}
+
+p{
+  float:right;
+  background-color:white;
+}
+
 
 
 /*Animation*/
