@@ -7,6 +7,7 @@ var elements = function(name,img,parent)
   this.name= name,
   this.link="/"+name,
   this.url=name+".html",
+  this.text=name+".txt",
   this.img=img,
   this.class="."+name,
   this.parent="#"+parent,
@@ -123,12 +124,21 @@ if(testbody.id===array[i]["body"])
     var image = document.createElement("img");
     container.appendChild(image);
     image.src=array[i]["img"];
-    var par = document.createElement("p");
-    container.appendChild(par);
+    var textdiv = document.createElement("div");
+    pardiv.appendChild(textdiv);
+    textdiv.id="textdiv";
     var h1_gabriel = document.createElement("h1");
-    par.appendChild(h1_gabriel);
+    textdiv.appendChild(h1_gabriel);
+    var divbelowintro = document.createElement("div");
+    textdiv.appendChild(divbelowintro);
+    divbelowintro.setAttribute("class","divbelow");
+    var paragraph = document.createElement("p");
+    textdiv.appendChild(paragraph);
+    paragraph.innerText=array[i]["text"];
+
+
     h1_gabriel.innerText="gabriel aldana";
-    h1_gabriel.setAttribute("class",array[i]["h1tag"])
+    h1_gabriel.setAttribute("class",array[i]["h1tag"]);
 
 
     var div = document.createElement("div");
