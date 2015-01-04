@@ -132,7 +132,7 @@ if(testbody.id===array[i]["body"])
     divbelowintro.setAttribute("class","divbelow");
     var paragraph = document.createElement("p");
     textdiv.appendChild(paragraph);
-    paragraph.innerText="this is a text. i repeat, this is a test.";
+    paragraph.innerText="REPLACEME";
 
 
     h1_gabriel.innerText="gabriel aldana";

@@ -21,17 +21,15 @@ var server = http.createServer( function ( request, response )
     this.navdivsid=name+"navdivsid",
     this.h1tag=name+"_h1",
     this.render="render.js";
-
   }
 
   var about_me = new elements("about_me","gabriel.png","toprightquad");
   var projects_div = new elements("projectsdiv","filler","topleftquad");
   var resume = new elements("resume", "resume.png", "bottomsleftquad");
   var contact_me = new elements("contact_me", "filler", "bottomrightquad");
-  var homepage = new elements("homepage","filler","filler");
-  var array = [about_me,projects_div,resume,contact_me,homepage];
+  var array = [about_me,projects_div,resume,contact_me];
 
-if(path==="/")
+if(path==="/" || path==="/homepage")
     {
       fs.readFile("homepage.html", function(err,data)
       {
@@ -39,7 +37,14 @@ if(path==="/")
         response.end(convert);
       })
     }
-
+    if(path==="/render.js")
+      {
+        fs.readFile("render.js", function(err,data)
+        {
+          var convert = data.toString();
+          response.end(convert);
+        })
+      }
     if(path==="/stylesheet.css")
       {
         fs.readFile("./stylesheet.css", function(err,data)
@@ -48,16 +53,6 @@ if(path==="/")
           response.end(convert);
         })
       }
-
-      if(path==="/render.js")
-        {
-          fs.readFile("./render.js", function(err,data)
-          {
-            var convert = data.toString();
-            response.end(convert);
-          })
-        }
-
           for(i=0;i<array.length;i++)
         {
         if(handle[1]===array[i]["name"])
@@ -68,6 +63,7 @@ if(path==="/")
             fs.readFile(array[i]["url"], function(err,datafirst)
             {
               var convert = datafirst.toString();
+
               fs.readFile(renderingfile,function(err,datasecond)
               {
                 var converender = datasecond.toString();
@@ -75,18 +71,10 @@ if(path==="/")
                 {
                   var converttext = datathird.toString().trim();
                   var testhis = converender.replace("REPLACEME",converttext);
-                  fs.writeFile(renderingfile,testhis,function(e)
-                  {
-                    console.log("converted to data!");
-                    console.log(convert);
-                  })
-                  response.end(convert);
+                  var scriptag = convert.replace("<script src='./render.js'>","<script>"+testhis)
+                 response.end(scriptag);
                 })
-
               })
-
-              //response.end(convert);
-
             })
           }
           if(handle[1]===array[i]["img"])
@@ -97,14 +85,6 @@ if(path==="/")
                 response.end(data);
               })
             }
-            if(handle[1]===array[i]["text"])
-              {
-                fs.readFile(array[i]["text"], function(err,data)
-                {
-                  var convert = data.toString();
-                  response.end(data);
-                })
-              }
         }
   })
   server.listen( 3000 );
