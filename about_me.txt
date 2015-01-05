@@ -1,1 +1,3 @@
-this is a text. i repeat, this is a test.boyah
+Hi! My name is Gabriel.\r\n\r\nI'm a full-stack web developer. I'm knowledgeable in JavaScript, HTML/CSS, node.js, git, SQL and VBA.\r\n\r\nI have experience in the health informatics field, having worked in data reporting and analysis. I have a background in database administration. Prior to my involvement in web development languages and frameworks, I was well-versed in advanced Microsoft Excel
+and SQL. My work in database management has exposed me to the visual representation of data and providing an intuitive and
+informative user experience.\r\n\r\nMy exposure to computer languages has now allowed me an additional platform to showcase data in an intuitive and exciting way.
