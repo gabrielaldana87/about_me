@@ -116,9 +116,9 @@ body{
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
   background-size: 100% auto;
-  /*background-image:url("./gabriel.png");*/
+  background-image:url("./contact_me.png");
   top:0%;
-  height:100%;
+  height:75%;
   position:absolute;
   /*-webkit-animation: trans .5s;
   animation: trans .5s;*/
@@ -325,10 +325,20 @@ a:hover #fourth:hover.right-to-left {
 
 .resume_h1{
   color:#2980b9;
+  -webkit-animation: trans 5s;
+  animation: trans 5s;
 }
 
 .projectsdiv_h1{
   color:#8e44ad;
+  -webkit-animation: trans 5s;
+  animation: trans 5s;
+}
+
+.contact_me_h1{
+  color:#27ae60;
+  -webkit-animation: trans 5s;
+  animation: trans 5s;
 }
 
 #pardiv{
@@ -336,22 +346,39 @@ a:hover #fourth:hover.right-to-left {
   overflow:hidden;
 }
 
-#colordiv{
+#about_me_colordiv{
   background-color:crimson;
-  width:25%;
+  width:33%;
   height:2%;
   top:20%;
 }
-
+#contact_me_colordiv{
+  background-color:#27ae60;
+  width:33%;
+  height:2%;
+  top:20%;
+}
+#resume_colordiv{
+  background-color:#2980b9;
+  width:33%;
+  height:2%;
+  top:20%;
+}
+#projectsdiv_colordiv{
+  background-color:#8e44ad;
+  width:33%;
+  height:2%;
+  top:20%;
+}
 #container{
   /*top:50%;*/
   background-color:white;
-  width:25%;
+  width:33%;
   float:left;
 }
 
 #textdiv{
-  width:75%;
+  width:67%;
   float:right;
   background-color:white;
 }
@@ -375,6 +402,10 @@ p{
   margin-right:5%;
 }
 
+#fade_h1{
+  color:grey;
+  margin-top:-16px;
+}
 
 
 /*Animation*/

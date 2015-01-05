@@ -12,13 +12,14 @@ var elements = function(name,img,parent)
   this.body=name+"_body",
   this.idSelect="#"+this.body,
   this.navdivsid=name+"navdivsid",
-  this.h1tag=name+"_h1"
+  this.h1tag=name+"_h1",
+  this.colordiv=name+"_colordiv"
 }
 
 var about_me = new elements("about_me","gabriel.png","toprightquad");
 var projects_div = new elements("projectsdiv","filler","topleftquad");
 var resume = new elements("resume", "resume.jpg", "bottomsleftquad");
-var contact_me = new elements("contact_me", "filler", "bottomrightquad");
+var contact_me = new elements("contact_me", "contact_me.png", "bottomrightquad");
 var homepage = new elements("homepage","filler","filler");
 var array = [about_me,projects_div,resume,contact_me,homepage];
 
@@ -109,13 +110,13 @@ if(testbody.id===array[i]["body"])
     var h1_nav = document.createElement("h1");
     divvy.appendChild(h1_nav);
     h1_nav.setAttribute("class",array[i]["h1tag"])
-    h1_nav.innerText=array[i]["name"];
+    h1_nav.innerText="gabriel aldana";
     var pardiv = document.createElement("div");
     am_body.appendChild(pardiv);
     pardiv.id="pardiv";
     var colordiv = document.createElement("div");
     pardiv.appendChild(colordiv);
-    colordiv.id="colordiv";
+    colordiv.id=array[i]["colordiv"];
     var container = document.createElement("div");
     pardiv.appendChild(container);
     container.id="container";
@@ -135,8 +136,8 @@ if(testbody.id===array[i]["body"])
     paragraph.innerText="REPLACEME";
 
 
-    h1_gabriel.innerText="gabriel aldana";
-    h1_gabriel.setAttribute("class",array[i]["h1tag"]);
+    h1_gabriel.innerText=array[i]["name"];
+    h1_gabriel.id="fade_h1";
 
 
     var div = document.createElement("div");

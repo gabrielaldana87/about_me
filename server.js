@@ -23,7 +23,7 @@ var server = http.createServer( function ( request, response )
   var about_me = new elements("about_me","gabriel.png","toprightquad");
   var projects_div = new elements("projectsdiv","filler","topleftquad");
   var resume = new elements("resume", "resume.jpg", "bottomsleftquad");
-  var contact_me = new elements("contact_me", "filler", "bottomrightquad");
+  var contact_me = new elements("contact_me", "contact_me.png", "bottomrightquad");
   var array = [about_me,projects_div,resume,contact_me];
 
 if(path==="/" || path==="/homepage")
