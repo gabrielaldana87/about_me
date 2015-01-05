@@ -17,7 +17,7 @@ var elements = function(name,img,parent)
 }
 
 var about_me = new elements("about_me","gabriel.png","toprightquad");
-var projects_div = new elements("projectsdiv","filler","topleftquad");
+var projects_div = new elements("projectsdiv","projectsdiv.png","topleftquad");
 var resume = new elements("resume", "resume.jpg", "bottomsleftquad");
 var contact_me = new elements("contact_me", "contact_me.png", "bottomrightquad");
 var homepage = new elements("homepage","filler","filler");
