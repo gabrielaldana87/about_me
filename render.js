@@ -13,7 +13,9 @@ var elements = function(name,img,parent)
   this.idSelect="#"+this.body,
   this.navdivsid=name+"navdivsid",
   this.h1tag=name+"_h1",
-  this.colordiv=name+"_colordiv"
+  this.colordiv=name+"_colordiv",
+  this.href="http://104.236.29.96:8080/client.html",
+  this.atag="Chat App"
 }
 
 var about_me = new elements("about_me","gabriel.png","toprightquad");
@@ -133,8 +135,17 @@ if(testbody.id===array[i]["body"])
     divbelowintro.setAttribute("class","divbelow");
     var paragraph = document.createElement("p");
     textdiv.appendChild(paragraph);
-    paragraph.innerText="REPLACEME";
-
+    if(testbody.id==="projectsdiv_body")
+      {
+      var a = document.createElement("a");
+      paragraph.appendChild(a);
+      a.href=array[i]["href"];
+      a.innerText=array[i]["atag"];
+      }
+    else
+      {
+      paragraph.innerText="REPLACEME";
+      }
 
     h1_gabriel.innerText=array[i]["name"];
     h1_gabriel.id="fade_h1";

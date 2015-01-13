@@ -1,2 +1,2 @@
 these are the projects i have worked on
-<a href=http://104.236.29.96:8080/client.html>Chat App</a>
+Chat App
